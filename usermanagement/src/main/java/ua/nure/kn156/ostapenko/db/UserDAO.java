@@ -11,7 +11,7 @@ import ua.nure.kn156.ostapenko.User;
  * @author Maksym
  *
  */
-public interface UserDAO {
+public interface UserDao {
 	/**
 	 * Adds user into DB users table and get new user's id from db
 	 * 
