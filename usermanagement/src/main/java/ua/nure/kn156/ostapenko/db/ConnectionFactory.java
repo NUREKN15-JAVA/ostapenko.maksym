@@ -1,7 +1,6 @@
 package ua.nure.kn156.ostapenko.db;
 
 import java.sql.Connection;
-
 /**
  * Interface that defines a method for creating a connection factory
  * 
@@ -17,6 +16,5 @@ public interface ConnectionFactory {
 	 * @return generated connection object
 	 * @throws DatabaseException
 	 */
-	Connection createConnection() throws DatabaseException;
-
+    Connection createConnection() throws DatabaseException;
 }
