@@ -17,7 +17,20 @@ public class User {
 	}
 
 	public User() {
-		
+
+	}
+
+	public User(Long id, String firstName, String lastName, Date date) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.dateOfBirthd = date;
+	}
+
+	public User(String firstName, String lastName, Date date) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.dateOfBirthd = date;
 	}
 
 	public Long getId() {
@@ -69,4 +82,25 @@ public class User {
 		}
 		return age;
 	}
+
+	public boolean equals(Object o) {
+		if (o == null) {
+			return false;
+		}
+		if (this == o) {
+			return true;
+		}
+		if (this.getId() == null && ((User) o).getId() == null) {
+			return true;
+		}
+		return this.getId().equals(((User) o).getId());
+	}
+
+	public int hashCode() {
+		if (this.getId() == null) {
+			return 0;
+		}
+		return this.getId().hashCode();
+	}
+
 }
